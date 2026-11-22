@@ -1,0 +1,37 @@
+#include "version.hpp"
+#ifdef UNIFIED_EDITOR
+#define APP_NAME "OWL-Tables"
+1 24 "../unified/app.manifest"
+#else
+#define APP_NAME "Boolean2FBD"
+1 24 "app.manifest"
+#endif
+MAINICON ICON "../assets/Table2FBD.ico"
+BIT_CODE RCDATA "../docs/solver/examples/lookup-and-reuse.json"
+BIT_COMPARE RCDATA "../docs/solver/examples/word-mask.json"
+ROW_MASKS RCDATA "../docs/solver/examples/row-masks.json"
+1 VERSIONINFO
+FILEVERSION BOOLEAN_VERSION_NUM
+PRODUCTVERSION BOOLEAN_VERSION_NUM
+FILEOS 0x40004L
+FILETYPE 0x1L
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904b0"
+    BEGIN
+      VALUE "FileDescription", APP_NAME
+      VALUE "FileVersion", BOOLEAN_VERSION
+#ifdef UNIFIED_EDITOR
+      VALUE "InternalName", APP_NAME
+      VALUE "OriginalFilename", "OWL-Tables.exe"
+#endif
+      VALUE "ProductName", APP_NAME
+      VALUE "ProductVersion", BOOLEAN_VERSION
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1200
+  END
+END

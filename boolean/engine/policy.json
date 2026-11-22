@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "policy",
+  "mode": "compact_logic",
+  "source": {"max_inputs": 16, "max_rules": 4096},
+  "search": {"max_candidates": 24, "max_ir_nodes": 100000, "work_limit": 100000},
+  "export": {"max_macro_levels": 3, "cross_language_calls": false, "allow_full_lut": false, "table_bytes": 256},
+  "device": {"profile": "unmeasured", "ram_bytes": null, "flash_bytes": null},
+  "native_fbd": {"code32": true, "xor": true, "putbit": true, "extract": true, "sel": true}
+}

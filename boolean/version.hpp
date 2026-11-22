@@ -1,0 +1,5 @@
+#ifndef BOOLEAN_VERSION_HPP
+#define BOOLEAN_VERSION_HPP
+#define BOOLEAN_VERSION "0.2.3"
+#define BOOLEAN_VERSION_NUM 0,2,3,0
+#endif
