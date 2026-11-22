@@ -1,0 +1,26 @@
+FUNCTION_BLOCK Voting
+VAR_INPUT
+I1 : BOOL; // Датчик 1
+I2 : BOOL; // Датчик 2
+I3 : BOOL; // Датчик 3
+END_VAR
+VAR_OUTPUT
+Q : BOOL;
+NQ : BOOL;
+END_VAR
+VAR
+LogicV3 : BOOL;
+LogicV4 : BOOL;
+LogicV5 : BOOL;
+END_VAR
+LogicV3 := I2 OR I3;
+LogicV4 := I1 AND LogicV3;
+LogicV5 := I2 AND I3;
+Q := LogicV4 OR LogicV5;
+NQ := NOT Q;
+END_FUNCTION_BLOCK
+
+// Сгенерировано OWL-Tables
+// LWB1 Z 545 1780791316 f26e32d4058ad45ff7610a4f207ccfc9 2
+// LWB1 1/2 eNqLVnLKz89R0lEKyy_JzEtX0qlWSktKUbIqKSpN1VEqLoGwaoHCmXkFpSXxyfm5ual5JcVKVtFKF6Zc2HCx6WL7hR0XdikYAs1AETBCFzBWitWBmALW7QnS4QlS5QmVKUstKkkF2q3kFwgUzS8tASoF8kCcotKcVJCuaiWoA4DiSsimGQB5EAw0qhAoa6AE
+// LWB1 2/2 cjQO1YYkqQapNCTJbBTVhoTMhphPirsNiTbbkGjVhlhUx9bGAgBClKWM
